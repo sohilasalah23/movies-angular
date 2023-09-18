@@ -1,0 +1,48 @@
+// .content:hover{
+//     height: 100%;
+//     width: 100%;
+//     background-color: $lightBgColor;
+// }
+
+
+
+.content{
+    overflow: hidden;
+    .layer{
+        position: absolute;
+        background-color: rgba($color: #000000, $alpha: .5);   
+        width: 100%;
+    height: 100%;
+    top: 100%;
+       transition: all 1s;
+    }
+    img{
+       transition: all 1s;
+
+    }
+    &:hover{
+        .layer{
+            top:0
+        }
+        img{
+            scale: 1.5;
+        }
+    }
+
+    .rate{
+        position: absolute;
+        background-color: #24baef;
+        width:2rem ;
+        height: 2rem;
+        top: 0;
+        right: 0;
+    }
+
+} 
+
+// a{
+//     text-decoration: none;
+//     list-style-type: ;
+
+// }
+   

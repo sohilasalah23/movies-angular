@@ -1,0 +1,39 @@
+<div class="container w-75">
+    <h2 class="m-3">login form</h2>
+    <div *ngIf="APIerrer" class="alert text-danger">
+        {{APIerrer}}
+       </div>
+    <form [formGroup]="loginform" (ngSubmit)="loginuser(loginform)">
+
+    <div class="email form-group">
+        <label class="mb-2 " for="email">email:</label>
+        <input type="email" class="form-control" id="email" formControlName="email">
+        <div *ngIf="loginform.get('email')?.errors &&loginform.get('email')?.touched || isnotvalidform " class="alert text-danger">
+            <p *ngIf="loginform.get('email')?.getError('required')" class="mb-0">email is required</p>
+            <p *ngIf="loginform.get('email')?.getError('email')"  class="mb-0">invalid email </p>
+        </div>
+    </div>
+    <div class="password form-group">
+        <label class="mb-2 " for="password">password:</label>
+        <input type="password" class="form-control" id="password" formControlName="password">
+        <div *ngIf="loginform.get('password')?.errors &&loginform.get('password')?.touched || isnotvalidform" class="alert text-danger ">
+            <p *ngIf="loginform.get('password')?.getError('required')" class="mb-0">password is required</p>
+            <p *ngIf="loginform.get('password')?.getError('pattern')"  class="mb-0">invalid password </p>
+        </div>
+    </div>
+   <div class="d-flex align-items-center my-3">
+    <div class="d-flex">don't have account ? <p routerLink="/register" class="cursor-pointer text-info"> register</p></div>
+
+<button type="reset" *ngIf="isloading" class="btn btn-info  ms-auto d-flex">
+    <i   class="fa-solid fa-spinner"></i>
+
+</button>
+    <button *ngIf="!isloading" [disabled]="!loginform.valid" type="submit" class="btn btn-info  ms-auto d-flex">
+        <span  >login</span>
+        
+        </button>
+   </div>
+
+</form>
+
+</div>

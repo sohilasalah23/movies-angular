@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <img [src]="['https://image.tmdb.org/t/p/w500'+itemdetails.poster_path]" class="w-100" alt="">
+        </div>
+        <div class="col-md-8">
+            <div class="content">
+                <h2>{{itemdetails.title ||itemdetails.name}}</h2>
+                <h5 class="text-muted">{{itemdetails.tagline}}</h5>
+            </div>
+            <div class="gener">
+                <ul class="d-flex ">
+                    <li class="bg-info p-1 m-2 list-unstyled" *ngFor="let genre of itemdetails.genres">
+                        {{genre.name}}
+                    </li>
+                </ul>
+            </div>
+            <div class="info">
+                <ul class="list-unstyled">
+                    <li class="m-2">vote: {{itemdetails.vote_average}}</li>
+                    <li class="m-2">vote count: {{itemdetails.vote_count}}</li>
+                    <li class="m-2">popularity: {{itemdetails.popularity}}</li>
+                    <li class="m-2">release date: {{itemdetails.release_date}}</li>
+                </ul>
+            </div>
+            <div class="overview">
+                <h5 class="text-muted">{{itemdetails.overview}}</h5>
+            </div>
+        </div>
+    </div>
+</div>

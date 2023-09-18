@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="row  mb-5">
+     
+        <div class="col-md-4  ">
+            <div class=" d-flex h-100 align-items-center ">
+            <div class="header">
+                <h2>trending <br> movies <br>to watch now</h2>
+                <p class="text-muted">most watched movies</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-2 " *ngFor="let movie of homemovies" >
+           <app-item [info]='movie'></app-item>
+        </div>
+     </div>
+
+     <div class="row  mt-5">
+     
+        <div class="col-md-4  ">
+            <div class=" d-flex h-100 align-items-center ">
+            <div class="header">
+                <h2>trending <br> tv <br>to watch now</h2>
+                <p class="text-muted">most watched tv</p>
+            </div>
+        </div>
+        </div>
+        <div class="col-md-2 " *ngFor="let tv of hometv" >
+           <app-item [info]='tv'></app-item>
+        </div>
+     </div>
+    
+    </div>
