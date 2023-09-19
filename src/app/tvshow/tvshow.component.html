@@ -1,8 +1,18 @@
-<div class="container">
+<div class="container py-5">
+    <input   [(ngModel)]="term" type="text" name="search" (change)="search()" class="form-control my-5 bg-transparent text-white w-50 d-block m-auto" placeholder="search...">
+  
     <div class="row">
+
         <div class="col-md-3" *ngFor="let tv of alltv">
            <app-item [info]='tv'></app-item>
 
         </div>
     </div>
+    <nav aria-label="..." class="d-flex justify-content-center my-2" *ngIf="!termexist" >
+      <ul class="pagination">
+       
+        <li class="page-item" *ngFor="let page of pages"><a class="page-link" (click)="gettv(page)">{{page}}</a></li>
+        
+      </ul>
+    </nav>
 </div>

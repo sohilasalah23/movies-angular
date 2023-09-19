@@ -1,6 +1,8 @@
-<div class="container">
+<div class="container py-5">
+    <input [(ngModel)]="term" type="text" name="search" class="form-control my-5 bg-transparent text-white w-50 d-block m-auto" placeholder="search...">
+
     <div class="row">
-        <div class="col-md-3" *ngFor="let movie of allmovies">
+        <div class="col-md-3" *ngFor="let movie of allmovies|search:term">
            <app-item [info]='movie'></app-item>
 
 

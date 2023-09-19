@@ -4,5 +4,6 @@ export interface Movieitem {
     title?:string,
     vote_average?:string,
     overview?:string,
-    media_type?:string
+    media_type?:string,
+    name?:string
 }

@@ -2,15 +2,15 @@
 <div [routerLink]="['/movie-detials',info.id,info.media_type]" class="content position-relative my-2">
     <figure class="m-0">
         <img [src]="'https://image.tmdb.org/t/p/w500'+info.poster_path" class="w-100 h-100 "  alt="">
-        <div class="rate text-black-50" >
-            {{info.vote_average}}
+        <div class="rate text-black-50 d-flex justify-content-center" >
+            {{info.vote_average | number:"1.0-2"}}
         </div>
     </figure> 
     <div class="layer text-muted">
-        {{info.overview}}
+        {{info.overview |seemore: 10 }}....
     </div>
 </div>
 <div class="title-movie">
-    <h5 class="text-muted">{{info.title?.split(' ')?.splice(0,4)?.join(' ')}}</h5>
+    <h5 class="text-muted">{{info.title?.split(' ')?.splice(0,4)?.join(' ') || info.name}}</h5>
 </div>
 

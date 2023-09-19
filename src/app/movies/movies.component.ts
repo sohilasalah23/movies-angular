@@ -9,6 +9,8 @@ import { Movieitem } from '../movieitem';
 })
 export class MoviesComponent implements OnInit {
   allmovies:Movieitem[]=[]
+  term:string=""
+
 
   constructor(private _moviesService:MoviesService){}
 
@@ -17,7 +19,7 @@ ngOnInit(): void {
 }
   getmovies(){
     this._moviesService.gettrending("movie").subscribe({
-      next:(res)=>{console.log(res.results)
+      next:(res)=>{console.log("movie",res.results)
       this.allmovies=res.results},
       error:(err)=>console.log(err)
       

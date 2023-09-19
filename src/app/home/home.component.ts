@@ -22,7 +22,7 @@ this.gettv()
     this._moviesService.gettrending('movie').subscribe({
       next:(res)=>{
         this.homemovies=res.results.splice(0,10)
-        console.log(res.results);
+        
         
       },
       error:(err)=>console.log(err)
@@ -31,9 +31,8 @@ this.gettv()
    }
    gettv(){
     this._moviesService.gettrending("tv").subscribe({
-      next:(res)=>{console.log("tv", res)
+      next:(res)=>{
     this.hometv=res.results.splice(0,10)
-        console.log("tv",this.hometv)
   },
       error:(err)=>console.log(err)
   })}
