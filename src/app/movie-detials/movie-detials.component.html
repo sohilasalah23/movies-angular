@@ -1,10 +1,16 @@
-<div class="container p-5">
+<div [class.d-none]="!isopen" class="container pt-5">
+    <div class="icon d-flex justify-content-end mt-4">
+        <button (click)="closedetials()" class=" btn ">
+            <i class="fa-solid fa-xmark text-info "></i>  
+        </button>
+        
+    </div>
     <div class="row p-4">
-        <div class="col-md-4">
+        <div class="col-md-4 mb-3">
             <img [src]="['https://image.tmdb.org/t/p/w500'+itemdetails.poster_path]" class="w-100" alt="">
         </div>
         <div class="col-md-8">
-            <div class="content">
+            <div class="content ">
                 <h2>{{itemdetails.title ||itemdetails.name}}</h2>
                 <h5 class="text-muted">{{itemdetails.tagline}}</h5>
             </div>

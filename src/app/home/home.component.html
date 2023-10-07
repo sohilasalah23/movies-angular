@@ -2,7 +2,7 @@
 <div class="container my-5" >
     <div class="row  my-5">
      
-        <div class="col-md-4  ">
+        <div class="col-sm-12 col-md-12 col-lg-3 col-xl-4  ">
             <div class=" d-flex h-100 align-items-center ">
             <div class="header">
                 <h2>trending <br> movies <br>to watch now</h2>
@@ -10,14 +10,14 @@
             </div>
         </div>
         </div>
-        <div class="col-md-2 " *ngFor="let movie of homemovies" >
+        <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12 " *ngFor="let movie of homemovies" >
            <app-item [info]='movie'></app-item>
         </div>
      </div>
 
      <div class="row  mt-5">
      
-        <div class="col-md-4  ">
+        <div class="col-sm-12 col-md-12 col-lg-3 col-xl-4   ">
             <div class=" d-flex h-100 align-items-center ">
             <div class="header">
                 <h2>trending <br> tv <br>to watch now</h2>
@@ -25,7 +25,7 @@
             </div>
         </div>
         </div>
-        <div class="col-md-2 " *ngFor="let tv of hometv" >
+        <div class="col-xl-2 col-lg-3 col-md-6 col-sm-12 " *ngFor="let tv of hometv" >
            <app-item [info]='tv'></app-item>
         </div>
      </div>

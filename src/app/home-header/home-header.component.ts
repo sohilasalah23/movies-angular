@@ -13,7 +13,7 @@ export class HomeHeaderComponent {
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
-    touchDrag: false,
+    touchDrag: true,
     pullDrag: false,
     dots: false,
     margin: 10,
@@ -23,16 +23,22 @@ export class HomeHeaderComponent {
     navText: ['', ''],
     responsive: {
       0: {
-        items: 1
-      },
-      400: {
         items: 2
       },
-      740: {
+      500: {
         items: 3
       },
-      940: {
-        items: 8
+      600: {
+        items: 4
+      },
+      760: {
+        items: 5
+      },
+      1000:{
+        items:7
+      },
+      1200:{
+        items:8
       }
     },
     nav: true

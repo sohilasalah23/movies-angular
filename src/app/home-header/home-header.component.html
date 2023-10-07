@@ -1,4 +1,4 @@
-<section class="home" >
+<section class="home my-5" >
  <div class=" mt-5 pt-5 ">
     <div class="content mt-5 pt-5">
         <p class="fs-1 text-bold">our latest movies</p>
@@ -6,7 +6,7 @@
       
           <ng-container  *ngFor="let slide of homemovies">
             <ng-template carouselSlide >
-                <img [src]="'https://image.tmdb.org/t/p/w500'+slide.poster_path" class="w-100 "  alt="">
+                <img [src]="'https://image.tmdb.org/t/p/w500'+slide.poster_path" class="w-100  "  alt="">
             </ng-template>
           </ng-container>
       
